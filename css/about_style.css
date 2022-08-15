@@ -97,6 +97,19 @@ a:link {
     border-radius: 15px;
   }
   
+  .relative2 {
+    position: relative;
+    width: auto;
+    background-image: url(../images/mountains_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
+    margin: auto;
+    margin-bottom: 50px;
+    display: flex;
+    border-radius: 15px;
+  }
+
   .absolute {
     top: 25%;
     margin: auto;
@@ -108,15 +121,27 @@ a:link {
     color: #94FF98;
   }
   
-  
   .content {
     position: relative;
     width: auto;
-    background-color: #F5F5F5;
-    margin: 15px;
+    height: auto;
+    background-color: #f5f5f5;
+    padding-bottom: 15px;
+    margin: auto;
     margin-bottom: 50px;
+    display: grid;
+  }
+
+  .profile {
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
     border-radius: 15px;
     display: grid;
+    align-content: center;
   }
   
   .grid-container {
@@ -196,7 +221,7 @@ a:link {
   }
   
   
-  /* My Work */
+  /* Grids */
   .title{
     text-align: center;
     margin: 50px;
@@ -206,53 +231,6 @@ a:link {
     margin-top: 25px;
     margin-bottom: 25px;
   }
-  
-  .workGrid {
-    margin: auto;
-    padding: 2%;
-    row-gap: 30px;
-    display:grid;
-    align-items:center;
-    justify-content: center;
-    align-content:start;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "WeBoard infoWeBoard"
-    "CWWC infoCWWC"
-    "FTC infoFTC"
-  }
-  
-  #WeBoard {
-    grid-area:WeBoard;
-  }
-  #infoWeBoard {
-    grid-area: infoWeBoard;
-    text-align: left;
-    padding: 15px;
-  }
-  
-  #CWWC{
-    grid-area: CWWC;
-  }
-  
-  #infoCWWC {
-    grid-area: infoCWWC;
-    text-align: left;
-    padding: 15px;
-  }
-  
-  #FTC{
-    grid-area: FTC;
-    text-align: left;
-  }
-  
-  #infoFTC{
-    grid-area: infoFTC;
-    text-align: left;
-    padding: 15px;
-  }
-  
   
   .workImages {
     object-fit:cover;
@@ -268,7 +246,7 @@ a:link {
   .workGrid2 {
     margin: auto;
     padding: 2%;
-    column-gap: 30px;
+    column-gap: 75px;
     display:grid;
     align-items:center;
     justify-content: center;
@@ -276,21 +254,13 @@ a:link {
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-    "WeBoard2 CWWC2 FTC2"
-    "infoWeBoard2 infoCWWC2 infoFTC2"
+        "infoWeBoard2 infoCWWC2 infoFTC2"
   }
 
-  #WeBoard2 {
-    grid-area:WeBoard2;
-  }
   #infoWeBoard2 {
     grid-area: infoWeBoard2;
     text-align: left;
     padding: 15px;
-  }
-  
-  #CWWC2 {
-    grid-area: CWWC2;
   }
   
   #infoCWWC2 {
@@ -299,24 +269,44 @@ a:link {
     padding: 15px;
   }
   
-  #FTC2 {
-    grid-area: FTC2;
-    text-align: left;
-  }
-  
   #infoFTC2 {
     grid-area: infoFTC2;
     text-align: left;
     padding: 15px;
   }
   
-  
-  .workImages {
-    object-fit:cover;
-    width: 100%;
-    max-height:100%;
-    cursor: pointer;
-  }
+/* About Me */
+.aboutmeGrid {
+  margin: auto;
+  max-width: auto;
+  padding: 2%;
+  row-gap: 30px;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  align-content:start;
+}
+
+#aboutMe {
+  grid-area: aboutMe;
+}
+#infoAbout {
+  grid-area: infoAbout;
+  text-align: left;
+  padding: 15px;
+}
+
+.workImages {
+  object-fit:cover;
+  width: 100%;
+  max-height:100%;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+  text-align: left;
+}
 
   /* Footer */
   footer {
@@ -332,7 +322,7 @@ a:link {
     padding-bottom: 25px;
   }
   
-  /* Media Queries */
+  /* Media Queries for Mobile, etc. */
 
   @media only screen and (max-width:600px){
   
@@ -349,40 +339,25 @@ a:link {
         border-radius: 15px;
       }
 
-    .workGrid {
-        margin: 30px 30px;
-        row-gap: 0px;
-        display:grid;
-        align-items:center;
-        justify-content: center;
-        align-content:start;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "WeBoard"
-        "infoWeBoard"
-        "CWWC"
-        "infoCWWC" 
-        "FTC" 
-        "infoFTC"
-    }
-
     .workGrid2 {
         margin: 30px 30px;
+        margin-left: 28%;
         row-gap: 0px;
         display:grid;
         align-items:center;
         justify-content: center;
         align-content:start;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
         grid-template-columns: 1fr;
         grid-template-areas: 
-        "WeBoard2"
         "infoWeBoard2"
-        "CWWC2"
         "infoCWWC2" 
-        "FTC2" 
         "infoFTC2"
+    }
+
+    li {
+      list-style-type: none;
+      text-align: left;
     }
 
   }
